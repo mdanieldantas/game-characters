@@ -1,7 +1,12 @@
 const Character = require("./Character");
 
+
 module.exports = class Thief extends Character {
-  attack(targetCharacter) {
-    targetCharacter.lifepoints -= (this.attackPts - targetCharacter.defensePts) * 2
+  constructor(name, lifepoints, attackPts, defensePts) {
+      super(name, lifepoints, attackPts, defensePts);
   }
-}
+
+  attack(targetCharacter) {
+      targetCharacter.lifepoints -= (this.attackPts - targetCharacter.defensePts) * 2;
+  }
+};
