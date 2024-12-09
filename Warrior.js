@@ -14,12 +14,14 @@ module.exports = class Warrior extends Character {
   }
 
   switchStance() {
-    if (this.stance === 'attacking') {
-      this.stance = 'defending'
-      this.defensePts += this.shieldPts
+    if (this.stance === "attacking") {
+        // Se a postura atual for "attacking"
+        this.stance = "defending"; // Muda para "defending"
+        this.defensePts += this.shildPts; // Adiciona os pontos de escudo aos pontos de defesa
     } else {
-      this.stance = 'attacking'
-      this.defensePts -= this.shieldPts
+        // Se a postura atual for "defending"
+        this.stance = "attacking"; // Muda para "attacking"
+        this.defensePts -= this.shildPts; // Subtrai os pontos de escudo dos pontos de defesa
     }
-  }
+}
 }
